@@ -1,0 +1,106 @@
+---
+layout: post
+title:  "[STACK] 백준 1874번: 스택 수열"
+date:   2018-07-19 10:30:45
+author: Jm Park
+---
+
+# 문제
+스택 (stack)은 기본적인 자료구조 중 하나로, 컴퓨터 프로그램을 작성할 때 자주 이용되는 개념이다. 스택은 자료를 넣는 (push) 입구와 자료를 뽑는 (pop) 입구가 같아 제일 먼저 들어간 자료가 제일 나중에 나오는 (FILO, first in last out) 특성을 가지고 있다.  
+
+# 입력
+첫 줄에 n (1 ≤ n ≤ 100,000)이 주어진다. 둘째 줄부터 n개의 줄에는 수열을 이루는 1이상 n이하의 정수가 하나씩 순서대로 주어진다. 물론 같은 정수가 두 번 나오는 일은 없다.  
+
+# 출력
+입력된 수열을 만들기 위해 필요한 연산을 한 줄에 한 개씩 출력한다. push연산은 +로, pop 연산은 -로 표현하도록 한다. 불가능한 경우 NO를 출력한다.  
+
+# 예제 입력/출력
+| 예제 입력                                                     | 예제 출력                                                                                                      |
+| :-------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------- |
+| 8<br />4<br />3<br />6<br />8<br />7<br />5<br />2<br />1 | +<br />+<br />+<br />+<br />-<br />-<br />+<br />+<br />-<br />+<br />+<br />-<br />-<br />-<br />-<br />- |
+| 5<br />1<br />2<br />5<br />3<br />4                      | NO                                                                                                         |
+
+# 코드
+```{.cpp}
+#include <cstdio>
+#include <cstdlib>
+#include <iostream>
+
+#define MAX_SIZE 100005
+int stack[MAX_SIZE] = { 1, };
+int seq_idx = 0, stack_top = 0;
+
+using namespace std;
+
+// num을 STACK에 push하도록 하는 함수
+int push(int num) {
+	stack[++stack_top] = num;
+	return 1;
+}
+
+// STACK에서 top을 pop하도록 하는 함수
+int pop() {
+	if (stack_top != -1) 
+		return stack[stack_top--];
+	else
+		return 0;
+}
+
+int main() {
+	int n;
+	int seq[MAX_SIZE];
+	char answer[MAX_SIZE*2] = {'+', 0, };
+	int ans_idx = 1;
+	int stack_value = 2;
+	int ret;
+
+	// 입력값 받음
+	scanf("%d", &n);
+	for (int i = 0; i < n; i++) {
+		scanf("%d", &seq[i]);
+	}
+
+	while (seq_idx < n) {
+		
+		// stack_top 값과 seq_idx 값이 같으면 pop
+		if (stack[stack_top] == seq[seq_idx]) {
+			ret = pop();
+			seq_idx++;
+			answer[ans_idx++] = '-';
+		}
+		// 이미 stack에 모든 값을 넣은 경우 stack이 비게될 때 까지 pop
+		else if (stack_value > n) {
+			ret = pop();
+			// pop한 값이 수열의 값과 다른 경우
+			if (ret != seq[seq_idx])
+				ret = 0;
+			answer[ans_idx++] = '-';
+		}
+		// stack_top 값과 seq_idx 값이 다르면 push
+		else if (stack[stack_top] != seq[seq_idx]) {
+			ret = push(stack_value++);
+			answer[ans_idx++] = '+';
+		}
+
+		// pop혹은 push중 이상 상황 발견: NO에 해당
+		if (!ret)
+			break;
+	}
+
+	if (ret) {
+		for (int i = 0; answer[i]; i++)
+			printf("%c\n", answer[i]);
+	}
+	else
+		printf("NO\n");
+
+	return 0;
+}
+```
+
+# 풀이
+기본적인 스택의 push,pop 함수를 구현하고 main함수에서는 문제 요구에 맞춰 1~n까지 순서대로 스택에 삽입하였다.  스택과 수열 두 배열의 값을 비교하면서 요구하는 수열의 수와 같으면 pop, 다르면 push하는 형태의 코드이다.  
+pop을 하는 경우 answer배열에 -값을, push 하는 경우 answer배열에 +값을 삽입한다. 다만 스택의 push/pop 연산을 통해 원하는 수열의 모양을 만들어 내지 못하는 경우인  
+" 이미 stack에 n까지의 값을 다 넣은 상태면 계속 push하게 되는데, push값이 수열의 값과 다른 경우"  
+에 NO를 뱉어내도록 하였다.  
+계속 오류가 나서 어디가 틀렸는지 영 감이 안잡혔는데, answer배열의 크기가 최대 20만개까지 가능하다는 것을 놓쳤었다.  
