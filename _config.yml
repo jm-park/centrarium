@@ -35,23 +35,31 @@ redcarpet:
   extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
 
 # Archive settings (see https://github.com/jekyll/jekyll-archives/)
+category_archive:
+  type: jekyll-archives
+  path: /categories/
+tag_archive:
+  type: jekyll-archives
+  path: /tags/
 jekyll-archives:
   enabled:
     - categories
     - tags
-  layout: 'archive'
+  layouts:
+    category: archive-taxonomy
+    tag: archive-taxonomy
   permalinks:
-    category: '/category/:name/'
-    tag: '/tag/:name/'
+    category: /categories/:name/
+    tag: /tags/:name/
 
-# Archive settings
-# collections:
-#   tags:
-#     output: true
-#     permalink: /tags/:name/ # optional
-#   categories:
-#     output: true
-#     permalink: /:name/ # optional
+# jekyll-archives:
+#   enabled:
+#     - categories
+#     - tags
+#   layout: 'archive'
+#   permalinks:
+#     category: '/category/:name/'
+#     tag: '/tag/:name/'
 
 # Disqus comments
 disqus_shortname: jmparks-blog
