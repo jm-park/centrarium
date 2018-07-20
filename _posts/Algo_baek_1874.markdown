@@ -2,8 +2,8 @@
 layout: post
 title:  "[STACK] 백준 1874번: 스택 수열"
 date:   2018-07-19 10:30:45
-categories: Algorithm
 author: Jm Park
+categories: Algorithm
 ---
 
 # 문제
