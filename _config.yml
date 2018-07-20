@@ -30,24 +30,26 @@ paginate_path: "/page:num/"
 inter_post_navigation: false
 highlightjs_theme: "monokai-sublime"
 
+breadcrumbs: true  # disabled by default
+
 # Archive settings (see https://github.com/jekyll/jekyll-archives/)
-# jekyll-archives:
-#   enabled:
-#     - categories
-#     - tags
-#   layout: 'archive'
-#   permalinks:
-#     category: '/category/:name/'
-#     tag: '/tag/:name/'
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layout: 'archive'
+  permalinks:
+    category: '/category/:name/'
+    tag: '/tag/:name/'
 
 # Archive settings
-collections:
-  tags:
-    output: true
-    permalink: /tags/:name/ # optional
-  categories:
-    output: true
-    permalink: /:name/ # optional
+# collections:
+#   tags:
+#     output: true
+#     permalink: /tags/:name/ # optional
+#   categories:
+#     output: true
+#     permalink: /:name/ # optional
 
 # Disqus comments
 disqus_shortname: jmparks-blog
