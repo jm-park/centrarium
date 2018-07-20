@@ -30,7 +30,9 @@ paginate_path: "/page:num/"
 inter_post_navigation: false
 highlightjs_theme: "monokai-sublime"
 
-breadcrumbs: true  # disabled by default
+markdown: redcarpet
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
 
 # Archive settings (see https://github.com/jekyll/jekyll-archives/)
 jekyll-archives:
