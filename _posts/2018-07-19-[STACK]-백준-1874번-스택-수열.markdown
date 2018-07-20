@@ -17,8 +17,9 @@ categories: Algorithm
 # 예제 입력/출력
 | 예제 입력 | 예제 출력 |  
 | :-------------------- | :------------------ |  
-| 8<br />4<br />3<br />6<br />8<br />7<br />5<br />2<br />1 | +<br />+<br />+<br />+<br />-<br />-<br />+<br />+<br />-<br />+<br />+<br />-<br />-<br />-<br />-<br />- |  
+| 8 <br> 4<br />3<br />6<br />8<br />7<br />5<br />2<br />1 | +<br />+<br />+<br />+<br />-<br />-<br />+<br />+<br />-<br />+<br />+<br />-<br />-<br />-<br />-<br />- |  
 | 5<br />1<br />2<br />5<br />3<br />4 | NO |  
+{: .tablelines}
 
 # 코드
 ```{.cpp}
