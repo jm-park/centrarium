@@ -41,7 +41,7 @@ jekyll-archives:
     tag: '/tag/:name/'
 
 # Disqus comments
-disqus_shortname: jm-park
+disqus_shortname: jmparks-blog
 
 # Google analytics
 # ga_tracking_id: "UA-XXXX-1"
