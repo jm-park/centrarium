@@ -14,7 +14,7 @@ subtitle: "얼렁뚱땅 기술 블로그"
 email: jmpark7559@gmail.com
 name: Jm Park
 description: >
-  개발쟁이가 되기 위한 생초짜의 기술 블로그 기록기.
+  개발쟁이가 되기 위한 생초짜의 기술 블로그 기록기
 # Base URL of site (i.e. /blog). It should always start with a slash,
 # and never end with a slash. Set it to a blank value if hosting at the
 # root of your server.
@@ -49,10 +49,10 @@ jekyll-archives:
 # Category descriptions (for archive pages)
 descriptions:
   - cat: jekyll
-    desc: "Posts describing Jekyll setup techniques."
+    desc: ""
 
   - cat: Algorithm
-    desc: "For alogorithm study"
+    desc: ""
 
 # Social icons and sharing options
 #
