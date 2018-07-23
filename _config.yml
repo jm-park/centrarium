@@ -48,7 +48,7 @@ redcarpet:
 disqus_shortname: jmparks-blog
 
 # Google analytics
-# ga_tracking_id: "UA-XXXX-1"
+ga_tracking_id: "UA-122644670-1"
 
 # Category descriptions (for archive pages)
 descriptions:
