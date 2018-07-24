@@ -1,0 +1,90 @@
+---
+layout: post
+title:  "[수학] 백준 1924번: 2007년"
+date:   2018-07-24 15:10:23
+author: Jm Park
+categories: Algorithm
+---
+
+# 문제
+오늘은 2007년 1월 1일 월요일이다. 그렇다면 2007년 x월 y일은 무슨 요일일까? 이를 알아내는 프로그램을 작성하시오.
+
+# 입력
+첫째 줄에 x월 y일이 무슨 요일인지에 따라 SUN, MON, TUE, WED, THU, FRI, SAT중 하나를 출력한다.
+
+# 출력
+첫째 줄에 x월 y일이 무슨 요일인지에 따라 SUN, MON, TUE, WED, THU, FRI, SAT중 하나를 출력한다.
+
+# 예제 입력/출력
+
+| 입력 | 출력 |  
+| :-------- | :------- |  
+| 1 1 | MON |
+| 3 1 | THU |  
+
+# 코드1
+```{.cpp}
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+	int x, y, k, n = 0;
+	int day[] = { 31,28,31,30,31,30,31,31,30,31,30,31 };
+	string date[] = { "MON","TUE","WED","THU","FRI","SAT" ,"SUN"};
+
+	scanf("%d %d", &x, &y);
+
+	for (int i = 0; i < x ; i++) {
+		if (i == x - 1)
+			k = y - 1;
+		else
+			k = day[i];
+		for (int j = 0; j < k; j++) {
+			n++;
+		}
+	}
+
+	cout << date[n%7] << '\n';
+
+	return 0;
+}
+```
+
+# 풀이1
+이 문제를 보고 가장 쉽게 접근할 수 있는 방법은 단순히 이중for문을 사용하여 바깥 for문은 '월'을 안쪽 for문은 '일'을 체크하는 것이다. 위의 코드는 단순한 방법으로 빠르게 구현해본 것이다.
+
+
+# 코드2
+```{.cpp}
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+	int x, y, k, n = 0;
+	int day[] = { 31,28,31,30,31,30,31,31,30,31,30,31 };
+	string date[] = { "MON","TUE","WED","THU","FRI","SAT" ,"SUN"};
+
+	scanf("%d %d", &x, &y);
+
+	// x-1달까지의 말일날 더함
+	for (int i = 0; i < x - 1; i++) {
+		n += day[i];
+	}
+
+	// x달의 y일까지의 날짜를 더하고 이의 요일을 구함
+	cout << date[(n + y - 1) % 7] << '\n';
+
+	return 0;
+}
+```
+
+# 풀이2
+이중 for문을 쓴 '코드1'에서 시간을 좀 더 단축시키는 방법을 고려하였다.  
+> 1. x-1달까지는 무조건 말일까지 카운트하게 된다.
+> 2. x달은 y일까지 카운트하면 된다.  
+
+이 두가지를 생각하면 for문 한번으로 가능하다는 것을 알게되었다.
