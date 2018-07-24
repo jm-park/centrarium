@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[소수점] 백준 1008번 A/B"
+title:  "[소수점] 백준 1008번: A/B"
 date:   2018-07-24 11:05:22
 author: Jm Park
 categories: Algorithm

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[에라토스테네스의 체] 백준 4673번 셀프 넘버"
+title:  "[셀프넘버] 백준 4673번: 셀프 넘버"
 date:   2018-07-20 21:00:59
 author: Jm Park
 categories: Algorithm

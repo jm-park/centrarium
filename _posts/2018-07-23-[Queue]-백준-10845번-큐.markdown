@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Queue] 백준 10845번 큐"
+title:  "[Queue] 백준 10845번: 큐"
 date:   2018-07-23 15:55:59
 author: Jm Park
 categories: Algorithm
