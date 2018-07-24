@@ -9,8 +9,8 @@ exclude:
   - "/vendor/"
 
 # Site settings
-title: LogLog
-subtitle: "얼렁뚱땅 기술 블로그"
+title: JM's IT Blog
+subtitle: "IT Dev Blog"
 email: jmpark7559@gmail.com
 name: Jm Park
 description: >
