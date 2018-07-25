@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[이론] 참조타입"
+title:  "참조타입"
 date:   2018-07-24 17:43:59
 author: Jm Park
 categories: Java
