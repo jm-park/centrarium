@@ -21,27 +21,29 @@ permalink: /about/
 </div> -->
 
 <div class="wrapper">
-        <div class="site-contact">
-          <p><strong>Contact</strong></p>
-          <ul class="social-media-list">
+    <div class="site-contact">
+        <center>
+            <p><strong>Contact</strong></p>
+            <ul class="social-media-list">
             <li>
-              <a href="mailto:{{ site.email }}">
+                <a href="mailto:{{ site.email }}">
                 <i class="fa fa-envelope-o"></i>
                 <span class="username">{{ site.email }}</span>
-              </a>
-            </li>
-      
-            {% for social in site.social %}
-              {% if social.url != null %}
-              <li>
-                <a href="{{ social.url }}" title="{{ social.desc }}">
-                  <i class="fa fa-{{ social.icon }}"></i>
-                  <span class="username">{% if social.username %}{{ social.username }}{% else %}{{ social.name }}{% endif %}</span>
                 </a>
-              </li>
-              {% endif %}
+            </li>
+        
+            {% for social in site.social %}
+                {% if social.url != null %}
+                <li>
+                <a href="{{ social.url }}" title="{{ social.desc }}">
+                    <i class="fa fa-{{ social.icon }}"></i>
+                    <span class="username">{% if social.username %}{{ social.username }}{% else %}{{ social.name }}{% endif %}</span>
+                </a>
+                </li>
+                {% endif %}
             {% endfor %}  
-        </ul>
+            </ul>
+        </center>
     </div>
 </div>
 <!--
@@ -58,3 +60,8 @@ You can find out more info about customizing your Jekyll theme, as well as basic
 [bencentra]: http://bencentra.com
 [jekyll]: https://github.com/jekyll/jekyll
 -->
+<style>
+li {
+    color: white; /* bullet color */
+}
+</style>
