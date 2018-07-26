@@ -7,9 +7,10 @@
     <div class="site-navigation">
 
       <p><strong>Site Map</strong></p>
+      <!-- layout이 page인 것들 다 가져옴 -->
       <ul class="pages">
         {% for page in site.pages %}
-        {% if page.title and page.main_nav != false %}
+        {% if page.title and page.main_nav != false and page.title != "Search results"%}
           <li class="nav-link"><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
         {% endif %}
         {% endfor %}
