@@ -20,11 +20,7 @@ layout: default
   <div class="post-date">{{ page.date | date: "%B %-d, %Y" }}</div>
   <div class="post-categories">
   {% if page.categories.size > 0 %}in {% for cat in page.categories %}
-    {% if site.jekyll-archives %}
-    <a href="{{ site.baseurl }}/category/{{ cat }}">{{ cat | capitalize }}</a>{% if forloop.last == false %}, {% endif %}
-    {% else %}
-    <a href="{{ site.baseurl }}/posts/#{{ cat }}">{{ cat | capitalize }}</a>{% if forloop.last == false %}, {% endif %}
-    {% endif %}
+    <a href="/search/?category={{ cat | escape }}">{{ cat }}</a>{% if forloop.last == false %}, {% endif %}
   {% endfor %}{% endif %}
   </div>
 </section>
@@ -36,7 +32,7 @@ layout: default
 {% if site.jekyll-archives %}
 {% if page.tags.size > 0 %}
 <section class="tags">
-  <strong>Tags:</strong> {% for tag in page.tags %}<a href="{{ site.baseurl }}/tag/{{ tag }}">{{ tag }}</a>{% if forloop.last == false %},&nbsp;{% endif %}{% endfor %}
+  <strong>Tags:</strong> <a href="/search/?tag=Jekyll">Jekyll</a>,&nbsp;<a href="/search/?tag=tag-search">tag-search</a>,&nbsp;<a href="/search/?tag=카테고리검색">카테고리검색</a>,&nbsp;<a href="/search/?tag=태그검색">태그검색</a>
 </section>
 {% endif %}
 {% endif %}
