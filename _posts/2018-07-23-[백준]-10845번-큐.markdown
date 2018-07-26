@@ -4,7 +4,7 @@ title:  "[백준] 10845번: 큐"
 date:   2018-07-23 15:55:59
 author: Jm Park
 categories: Algorithm
-tags: Queue 백준
+tags: Queue 백준 vector error
 ---
 
 # 문제
