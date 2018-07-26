@@ -29,12 +29,10 @@ layout: default
   {{ content }}
 </article>
 
-{% if site.jekyll-archives %}
 {% if page.tags.size > 0 %}
 <section class="tags">
   <strong>Tags:</strong> <a href="/search/?tag=Jekyll">Jekyll</a>,&nbsp;<a href="/search/?tag=tag-search">tag-search</a>,&nbsp;<a href="/search/?tag=카테고리검색">카테고리검색</a>,&nbsp;<a href="/search/?tag=태그검색">태그검색</a>
 </section>
-{% endif %}
 {% endif %}
 
 <section class="rss">
