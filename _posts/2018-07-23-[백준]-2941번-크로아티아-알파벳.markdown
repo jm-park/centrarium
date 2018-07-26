@@ -1,9 +1,10 @@
 ---
 layout: post
-title:  "[String] 백준 2941번: 크로아티아 알파벳"
+title:  "[백준] 2941번: 크로아티아 알파벳"
 date:   2018-07-23 13:00:49
 author: Jm Park
 categories: Algorithm
+tags: String 백준
 ---
 
 # 문제

@@ -1,9 +1,10 @@
 ---
 layout: post
-title:  "[Brute Force] 백준 1065번: 한수"
+title:  "[백준] 1065번: 한수"
 date:   2018-07-25 11:56:23
 author: Jm Park
 categories: Algorithm
+tags: Brute-Force 백준
 ---
 
 # 문제

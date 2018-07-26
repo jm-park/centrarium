@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "[For문] 백준 15552번 빠른: A+B"
+title:  "[백준] 15552번 빠른: A+B"
 date:   2018-07-23 19:21:22
 author: Jm Park
 categories: Algorithm
-tags: lorem
+tags: For문 백준
 ---
 
 # 문제

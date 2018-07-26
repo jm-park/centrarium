@@ -1,9 +1,10 @@
 ---
 layout: post
-title:  "[규칙] 백준 1193번: 분수찾기"
+title:  "[백준] 1193번: 분수찾기"
 date:   2018-07-25 18:13:59
 author: Jm Park
 categories: Algorithm
+tags: 규칙 백준
 ---
 
 # 문제

@@ -4,7 +4,7 @@ title:  "[규칙] 백준 2292번: 벌집"
 date:   2018-07-23 20:15:59
 author: Jm Park
 categories: Algorithm
-tags: lorem ipsum
+tags: 규칙 백준
 ---
 
 # 문제
