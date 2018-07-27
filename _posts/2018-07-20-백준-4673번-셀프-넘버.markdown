@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[백준] 4673번: 셀프 넘버"
+title:  "백준 4673번: 셀프 넘버"
 date:   2018-07-20 21:00:59
 author: Jm Park
 categories: Algorithm
