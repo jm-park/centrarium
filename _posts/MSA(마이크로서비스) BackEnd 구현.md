@@ -8,16 +8,16 @@ tags: msa
 ---
 
 # MSA구현 방식  
-DDD방식을 따른다.
-1. Item  마이크로서비스 구현   
-2. Item 마이크로서비스와 User 마이크로서비스를 Bureau(Eureka) 서버에 등록하는 작업 및 Item 마이크로서비스에서 User 마이크로서비스를 호출하는 Feign Client 방식 구현   
-3. Call Gate(Zuul Server) 을 통하여 Item 마이크로서비스 와 User 마이크로서비스를 호출하는 방식 구현  
+MSA방식의 Back-End 구현은 DDD방식을 따른다.  
+**Domain <-> Service <-> Store**  
+이들의 관계와 이것을 연결하는 Lifecycle의 집합니다.
 
 # DDD설계 구조
-가장 상단의 *Domain*에는 Entity/Logic/Spec/Store/Event/Lifecycle/Proxy 패키지가 포함된다.  
+가장 상단의 **Domain**에는 Entity/Logic/Spec/Store/Event/Lifecycle/Proxy 패키지가 포함된다.  
 Domain을 호출하는 하위에는 Service, Store가 존재한다.  
-*Service* 는 실제 Logic이 있으며, RestAPI를 호출한다. Logic/Rest/Lifecycle/Listen/Bind 패키지가 포함된다.  
-*Store* 는 실제 물리적 데이터를 변화시키는데 사용된다. Store(Jpo,Repository)/Lifecycle 패키지가 포함된다.
+**Service** 는 실제 Logic이 있으며, RestAPI를 호출한다. Logic/Rest/Lifecycle/Listen/Bind 패키지가 포함된다.  
+**Store** 는 실제 물리적 데이터를 변화시키는데 사용된다. Store(Jpo,Repository)/Lifecycle 패키지가 포함된다.
+**Boot** 는 프로젝트 세팅과 Back-End의 시작점이다.  
 
 ## Domain 구조
 ### 1. Entity  
